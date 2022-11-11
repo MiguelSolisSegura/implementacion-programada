@@ -1,0 +1,21 @@
+<launch>
+
+    <!-- publish ground truth path -->
+    <param name="pub_ground_truth" value="true" />
+
+    <!-- mirror latitude and longitude values for global estimate -->
+    <param name="mirror_xy" value="true" />
+
+    <!-- global topic remapping -->
+    <remap from="/gps" to="/ardrone/gnss_sensor/pose" />
+    <remap from="/ground_truth" to="/ardrone/vi_sensor/ground_truth/odometry" />
+
+    <!-- dataset saving path -->
+    <param name="saving_path" value="$(find vins)/../data/" />
+    
+    <!-- start nodes -->
+    <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find vins)/../config/simulation_vins_rviz_config.rviz" />
+    <node name="vins_estimator" pkg="vins" type="vins_node" output="screen" args="$(find vins)/../config/realsense_t265/config.yaml" />
+    <node name="globalEstimator" pkg="simulation_global_fusion" type="simulation_global_fusion_node" output="screen" />
+
+</launch>
