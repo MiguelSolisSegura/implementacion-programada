@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- enable robot visualization in rviz (WIP) -->
+  <param name="robot_description" textfile="$(find rotors_description)/urdf/multirotor_base.xacro"/>
+
+  <!-- launch rviz visualizaton file -->
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find rotors_gazebo)/config/forest_il.rviz" output="screen"/>
+
+  <!-- The path_ekf_plotter node -->	
+    <node name="ground_truth_plotter" type="path_ekf_plotter.py" pkg="odom_to_trajectory"/>
+
+</launch>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="default">
+
+    <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"/>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+   
+    <!-- exclude forest model with this comment -->
+    <include>
+      <uri>model://forest-il</uri>
+    </include> 
+
+    <gui>
+      <camera name="default_camera">
+        <pose>-48 -27 28  0.000 0.447 0.416</pose>
+      </camera>
+    </gui>
+
+    <scene>
+
+      <sky>
+        <clouds>
+          <speed>12</speed>
+          <humidity>2.5</humidity>
+        </clouds>
+        <time>17</time>
+      </sky>
+      
+
+      <background>0.54 0.54 0.54 1</background>
+      <ambient>0.54 0.54 0.60 1</ambient>
+
+    </scene>
+
+  </world>
+</sdf>

@@ -1,0 +1,411 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="forest">
+    <static>true</static>
+    <link name="link">
+
+      <!-- Omitting all collisions
+      <collision name="Collision">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      -->
+
+      <!-- Displaying full raw meshes
+      <visual name="TerrainRaw">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      -->
+
+      <!-- platform -->
+
+      <collision name="Platform">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>Platform</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="Platform">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>Platform</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- ground -->
+
+      <collision name="Terrain">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>terrain</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="Terrain">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>terrain</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- power lines -->
+
+      <collision name="Power Pole">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>power_pole</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="Power Pole">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>power_pole</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- grass -->
+
+      <visual name="Grass">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>grass</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>Grass</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- rocks -->
+
+      <collision name="Rock">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>rock</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="Rock">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>rock</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- regular trees -->
+
+      <collision name="TreeA Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_a_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeA Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_a_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="TreeA Branch">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_a_branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+     <visual name="TreeA Branch">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_a_branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeA</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="TreeB Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeB Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="TreeB Branch1">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_branch_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+     <visual name="TreeB Branch1">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_branch_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeB1</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="TreeB Branch2">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_branch_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeB Branch2">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_b_branch_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeB2</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="TreeC Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeC Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="TreeC Branch1">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_branch_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+     <visual name="TreeC Branch1">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_branch_1</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeC1</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="TreeC Branch2">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_branch_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeC Branch2">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_c_branch_2</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeC2</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- burned trees -->
+
+      <collision name="TreeD Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_d_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeD Trunk">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_d_trunk</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="TreeD Branch">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_d_branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="TreeD Branch">
+        <geometry>
+          <mesh>
+            <uri>model://forest-il-platform/meshes/forest.dae</uri>
+            <submesh>
+              <name>tree_d_branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://forest-il-platform/materials/scripts/</uri>
+            <uri>model://forest-il-platform/materials/textures/</uri>
+            <name>TreeB1</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

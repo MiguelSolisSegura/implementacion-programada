@@ -1,0 +1,312 @@
+material Grass
+{
+  technique
+  {
+    shadow_caster_material "Grass/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture free_grass.png
+      }
+    }
+  }
+}
+
+material TreeA
+{
+  technique
+  {
+    shadow_caster_material "TreeA/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture branch-texture-png.png
+      }
+    }
+  }
+}
+
+material TreeB1
+{
+  technique
+  {
+    shadow_caster_material "TreeB1/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture combobranch.png
+      }
+    }
+  }
+}
+
+material TreeB2
+{
+  technique
+  {
+    shadow_caster_material "TreeB2/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture combobranch3.png
+      }
+    }
+  }
+}
+
+material TreeC1
+{
+  technique
+  {
+    shadow_caster_material "TreeC1/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture combobranch4.png
+      }
+    }
+  }
+}
+
+material TreeC2
+{
+  technique
+  {
+    shadow_caster_material "TreeC2/shadow_caster_alpha"
+    pass
+    {
+      alpha_rejection greater 128
+
+      texture_unit
+      {
+        texture combobranch2.png
+      }
+    }
+  }
+}
+
+
+vertex_program caster_vp_glsl glsl
+{
+  source caster_vp.glsl
+
+  default_params
+  {
+    param_named_auto world_view_proj_mat worldviewproj_matrix
+    param_named_auto texel_offsets texel_offsets
+  }
+
+}
+
+fragment_program caster_fp_glsl glsl
+{
+  source caster_fp.glsl
+
+  default_params
+  {
+    param_named tex int 0
+  }
+}
+
+
+material Grass/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture free_grass.png
+      }
+    }
+  }
+}
+
+material TreeA/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture branch-texture-png.png
+      }
+    }
+  }
+}
+
+material TreeB1/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture combobranch.png
+      }
+    }
+  }
+}
+
+material TreeB2/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture combobranch3.png
+      }
+    }
+  }
+}
+
+material TreeC1/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture combobranch4.png
+      }
+    }
+  }
+}
+
+material TreeC2/shadow_caster_alpha
+{
+  transparency_casts_shadows on
+  technique
+  {
+    pass
+    {
+      // See: viewtopic.php?f=3&t=44817
+      fog_override true
+
+      cull_hardware none
+      cull_software none
+
+      alpha_rejection always_pass
+
+      vertex_program_ref caster_vp_glsl
+      {
+      }
+
+      fragment_program_ref caster_fp_glsl
+      {
+      }
+
+      texture_unit tex
+      {
+        texture combobranch2.png
+      }
+    }
+  }
+}
+
